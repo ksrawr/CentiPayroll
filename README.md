@@ -5,6 +5,7 @@ Centipayroll is a full stack web application prototype for Companies to managae 
 ## Table of Contents
 - [Built With](#built-with)
 - [Compile and Run](#compile-and-run)
+- [Learn More](#learn-more)
 
 ## Built With
 * [Python v3.6](https://www.python.org/downloads/release/python-360/)
@@ -30,3 +31,6 @@ $ python -m flask run
 $ export FLASK_APP=mysql-test.py
 $ python -m flask run
 ```
+## Learn More
+
+More information and details can be learned in the documentation from the Milestones folder
