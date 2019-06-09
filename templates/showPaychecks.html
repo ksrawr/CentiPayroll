@@ -1,0 +1,38 @@
+{% extends "layout.html" %}
+{% block content %}
+<div class="jumbotron jumbotron-fluid">
+  <div class="container">
+  	<h1 class="display-4">View Paycheck</h1>
+    <p class="lead">(Paychecks of Employees)</p>
+  	<hr class="my-4">
+<div>
+  <table id="paycheck" style="width:100%">
+      <tbody>
+        <tr>
+          <th>Check Id:</th>
+          <th>Employee Id:</th>
+          <th>Report Id:</th>
+            <th>Wage:</th>
+            <th>Hours Worked:</th>
+            <th>Amount:</th>
+        </tr>
+        {% if result %}
+        {% for row in result %}
+        <tr>
+          <td>{{row.0}}</td>
+          <td>{{row.4}}</td>
+          <td>{{row.5}}</td>
+            <td>{{row.2}}</td>
+            <td>{{row.3}}</td>
+            <td>{{row.1}}</td>
+          {% endfor %}
+        </tr>
+        {% endif %}
+      </tbody>
+    </table>
+</div>
+<hr>
+
+</div>
+</div>
+{% endblock content %}

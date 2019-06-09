@@ -1,0 +1,40 @@
+{% extends "layout.html" %}
+{% block content %}
+<div class="jumbotron jumbotron-fluid">
+  <div class="container">
+  	<h1 class="display-4">Create Paycheck</h1>
+    <p class="lead">(Reports of Employee)</p>
+  	<hr class="my-4">
+<div>
+  <table id="reports" style="width:100%">
+      <tbody>
+        <tr>
+          <th>Report:</th>
+          <th>Employee_ID:</th>
+          <th>Hours_worked:</th>
+        </tr>
+        {% if result %}
+        {% for row in result %}
+        <tr>
+          <td>{{row.0}}</td>
+          <td>{{row.4}}</td>
+          <td>{{row.3}}</td>
+          {% endfor %}
+        </tr>
+        {% endif %}
+      </tbody>
+    </table>
+</div>
+    <form method="POST" action="">
+      <div class="form-group">
+        <label for="reportId">Enter Report ID:</label>
+        <input type="text" class="form-control" id="reportId" name="reportId" placeholder="23">
+      </div>
+
+      <button type="submit" class="btn btn-primary btn-lg btn-block">Create PayCheck</button>
+    </form>
+<hr>
+
+</div>
+</div>
+{% endblock content %}

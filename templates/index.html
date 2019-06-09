@@ -1,0 +1,26 @@
+{% extends "layoutlogin.html" %}
+{% block content %}
+<div class="jumbotron jumbotron-fluid">
+  <div class="container">
+    <h1 class="display-4">Welcome to CentiPayroll</h1>
+    <hr class="my-4">
+    <ul class="nav flex-column">
+  <li class="nav-item">
+    <a class="nav-link" href="/login">
+      <button type="button" class="btn btn-primary btn-lg btn-block">Login</button>
+    </a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="/signup">
+      <button type="button" class="btn btn-primary btn-lg btn-block">Sign Up</button>
+    </a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="/login/admin">
+      <button type="button" class="btn btn-primary btn-lg btn-block">Admin Login</button>
+    </a>
+  </li>
+</ul>
+  </div>
+</div>
+{% endblock content %}

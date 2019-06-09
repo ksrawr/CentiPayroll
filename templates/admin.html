@@ -1,0 +1,51 @@
+{% extends "layoutlogin.html" %}
+{% block content %}
+<div class="jumbotron jumbotron-fluid">
+  <div class="container">
+    <h1 class="display-4">CentiPayroll Admin</h1>
+    <p class="lead">Add/Delete/Update Company(s)</p>
+    <form method="POST" action="">
+	  <div class="form-group">
+	    <label for="companyName">Enter Company Name</label>
+	    <input type="text" class="form-control" id="companyName" name="companyName" placeholder="Company Name">
+	  </div>
+	  <div class="form-group">
+	    <label for="companyPassword">Enter Company Password</label>
+	    <input type="text" class="form-control" id="companyPassword" name="companyPassword" placeholder="123456">
+	  </div>
+	  <div class="form-group">
+	    <label for="companyEmail">Enter Company Email</label>
+	    <input type="text" class="form-control" id="companyEmail" name="companyEmail" placeholder="company@gmail.com">
+	  </div>
+	  <div class="form-group">
+	    <label for="type">Enter Type</label>
+	    <input type="text" class="form-control" id="type" name="type"  placeholder="Add/Delete/Update">
+	  </div>
+
+	  <button type="submit" class="btn btn-primary">Submit</button>
+	</form>
+
+
+	    <div>
+  	<table id="Company" style="width:100%">
+  		<tbody>
+  			<tr>
+  				<th>ID:</th>
+          <th>Name:</th>
+          <th>Email:</th>
+  			</tr>
+        {% if result %}
+        {% for row in result %}
+  			<tr>
+  				<td>{{row.0}}</td>
+          <td>{{row.1}}</td>
+          <td>{{row.2}}</td>
+          {% endfor %}
+  			</tr>
+        {% endif %}
+  		</tbody>
+  	</table>
+  </div>
+  </div>
+</div>
+{% endblock content %}
