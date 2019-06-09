@@ -3,6 +3,8 @@
 Centipayroll is a full stack web application prototype for Companies to managae their payroll system. CentiPayroll is a CSC675 school project. 
 
 ## Table of Contents
+- [Built With](#built-with)
+- [Compile and Run](#compile-and-run)
 
 ## Built With
 * [Python v3.6](https://www.python.org/downloads/release/python-360/)
